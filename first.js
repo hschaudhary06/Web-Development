@@ -7,16 +7,6 @@ const scroll = new LocomotiveScroll({
 // circle mouse follower
 function circleMouseFollower() {
     window.addEventListener("mousemove", function (dets) {
-
-        var isMouseWithinPage = dets.clientX >= 0 && dets.clientX <= window.innerWidth &&
-            dets.clientY >= 0 && dets.clientY <= window.innerHeight;
-        
-        // Output result
-        if (isMouseWithinPage) {
-            document.querySelector('#minicircle').style.opacity = 1;
-        } else {
-            document.querySelector('#minicircle').style.opacity = 0;
-        }
         document.querySelector('#minicircle').style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
     });
 }
